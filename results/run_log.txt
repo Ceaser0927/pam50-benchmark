@@ -1,0 +1,33 @@
+{
+  "expression_samples": 1218,
+  "expression_genes": 20530,
+  "phenotype_samples": 1247,
+  "in_both_files": 1218,
+  "primary_tumour": 1097,
+  "valid_pam50_label": 844,
+  "duplicate_patient_samples_removed": 0,
+  "final_samples": 844,
+  "pam50_genes_found": 50,
+  "pam50_genes_missing": [],
+  "aliases_used": {
+    "ORC6": "ORC6L"
+  },
+  "missing_values": 0,
+  "class_counts": {
+    "LumA": 421,
+    "LumB": 192,
+    "Her2": 67,
+    "Basal": 141,
+    "Normal": 23
+  }
+}
+Logistic Regression  CV bal.acc = 0.923 ± 0.030  {'C': 0.03}  (2s)
+Random Forest        CV bal.acc = 0.863 ± 0.049  {'max_features': 'sqrt', 'min_samples_leaf': 10}  (120s)
+SVM (RBF)            CV bal.acc = 0.911 ± 0.028  {'C': 1.0, 'gamma': 0.001}  (11s)
+XGBoost              CV bal.acc = 0.852 ± 0.058  {'learning_rate': 0.03, 'max_depth': 1, 'n_estimators': 400}  (145s)
+              Model  Balanced accuracy  Macro precision  Macro recall  Macro F1  Macro OvR ROC-AUC
+Logistic Regression              0.894            0.809         0.894     0.841              0.983
+      Random Forest              0.874            0.806         0.874     0.830              0.985
+          SVM (RBF)              0.882            0.780         0.882     0.816              0.986
+            XGBoost              0.865            0.837         0.865     0.849              0.982
+Done in 375s. Outputs in /home/claude/pam50-benchmark/results

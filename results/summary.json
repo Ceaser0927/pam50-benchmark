@@ -1,0 +1,333 @@
+{
+  "cohort": {
+    "expression_samples": 1218,
+    "expression_genes": 20530,
+    "phenotype_samples": 1247,
+    "in_both_files": 1218,
+    "primary_tumour": 1097,
+    "valid_pam50_label": 844,
+    "duplicate_patient_samples_removed": 0,
+    "final_samples": 844,
+    "pam50_genes_found": 50,
+    "pam50_genes_missing": [],
+    "aliases_used": {
+      "ORC6": "ORC6L"
+    },
+    "missing_values": 0,
+    "class_counts": {
+      "LumA": 421,
+      "LumB": 192,
+      "Her2": 67,
+      "Basal": 141,
+      "Normal": 23
+    }
+  },
+  "n_train": 675,
+  "n_test": 169,
+  "classes": [
+    "LumA",
+    "LumB",
+    "Her2",
+    "Basal",
+    "Normal"
+  ],
+  "best_params": {
+    "Logistic Regression": {
+      "C": 0.03
+    },
+    "Random Forest": {
+      "max_features": "sqrt",
+      "min_samples_leaf": 10
+    },
+    "SVM (RBF)": {
+      "C": 1.0,
+      "gamma": 0.001
+    },
+    "XGBoost": {
+      "learning_rate": 0.03,
+      "max_depth": 1,
+      "n_estimators": 400
+    }
+  },
+  "cv_mean_balanced_accuracy": {
+    "Logistic Regression": 0.9229923365151427,
+    "Random Forest": 0.8631618343768775,
+    "SVM (RBF)": 0.9106528262453548,
+    "XGBoost": 0.8515634648083953
+  },
+  "confusion_matrices": {
+    "Logistic Regression": [
+      [
+        73,
+        7,
+        1,
+        0,
+        3
+      ],
+      [
+        3,
+        34,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        13,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        26,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        4
+      ]
+    ],
+    "Random Forest": [
+      [
+        71,
+        9,
+        0,
+        0,
+        4
+      ],
+      [
+        2,
+        37,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        11,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        26,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        4
+      ]
+    ],
+    "SVM (RBF)": [
+      [
+        68,
+        11,
+        1,
+        0,
+        4
+      ],
+      [
+        3,
+        34,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        13,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        26,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        4
+      ]
+    ],
+    "XGBoost": [
+      [
+        76,
+        6,
+        0,
+        0,
+        2
+      ],
+      [
+        6,
+        33,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        11,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        2,
+        26,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        4
+      ]
+    ]
+  },
+  "luminal_confusion": {
+    "Logistic Regression": {
+      "LumA_predicted_as_LumB": 7,
+      "LumB_predicted_as_LumA": 3,
+      "total_errors": 19,
+      "share_of_errors_LumA_LumB": 0.5263157894736842,
+      "per_class_recall": {
+        "LumA": 0.8690476190476191,
+        "LumB": 0.8717948717948718,
+        "Her2": 1.0,
+        "Basal": 0.9285714285714286,
+        "Normal": 0.8
+      }
+    },
+    "Random Forest": {
+      "LumA_predicted_as_LumB": 9,
+      "LumB_predicted_as_LumA": 2,
+      "total_errors": 20,
+      "share_of_errors_LumA_LumB": 0.55,
+      "per_class_recall": {
+        "LumA": 0.8452380952380952,
+        "LumB": 0.9487179487179487,
+        "Her2": 0.8461538461538461,
+        "Basal": 0.9285714285714286,
+        "Normal": 0.8
+      }
+    },
+    "SVM (RBF)": {
+      "LumA_predicted_as_LumB": 11,
+      "LumB_predicted_as_LumA": 3,
+      "total_errors": 24,
+      "share_of_errors_LumA_LumB": 0.5833333333333334,
+      "per_class_recall": {
+        "LumA": 0.8095238095238095,
+        "LumB": 0.8717948717948718,
+        "Her2": 1.0,
+        "Basal": 0.9285714285714286,
+        "Normal": 0.8
+      }
+    },
+    "XGBoost": {
+      "LumA_predicted_as_LumB": 6,
+      "LumB_predicted_as_LumA": 6,
+      "total_errors": 19,
+      "share_of_errors_LumA_LumB": 0.631578947368421,
+      "per_class_recall": {
+        "LumA": 0.9047619047619048,
+        "LumB": 0.8461538461538461,
+        "Her2": 0.8461538461538461,
+        "Basal": 0.9285714285714286,
+        "Normal": 0.8
+      }
+    }
+  },
+  "top10_genes": {
+    "Logistic Regression": [
+      "ERBB2",
+      "GRB7",
+      "MMP11",
+      "NAT1",
+      "SLC39A6",
+      "CDH3",
+      "EXO1",
+      "FGFR4",
+      "KRT5",
+      "TMEM45B"
+    ],
+    "Random Forest": [
+      "ESR1",
+      "ERBB2",
+      "BCL2",
+      "MAPT",
+      "GRB7",
+      "SLC39A6",
+      "UBE2T",
+      "CEP55",
+      "PGR",
+      "NAT1"
+    ],
+    "SVM (RBF)": [
+      "KRT5",
+      "CDH3",
+      "SFRP1",
+      "KRT17",
+      "GRB7",
+      "FOXC1",
+      "KRT14",
+      "ESR1",
+      "MAPT",
+      "EGFR"
+    ],
+    "XGBoost": [
+      "ESR1",
+      "KRT5",
+      "FOXA1",
+      "FOXC1",
+      "EXO1",
+      "KRT17",
+      "MLPH",
+      "EGFR",
+      "CEP55",
+      "NUF2"
+    ]
+  },
+  "config": {
+    "SEED": 42,
+    "TEST_SIZE": 0.2,
+    "CV_SPLITS": 5,
+    "CV_REPEATS": 5,
+    "N_BOOTSTRAP": 2000,
+    "N_PERM_REPEATS": 30
+  },
+  "environment": {
+    "python": "3.13.18",
+    "platform": "Linux-6.18.44-fc-v819-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "numpy": "2.5.3",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2",
+    "seaborn": "0.13.2"
+  },
+  "runtime_seconds": 375.1
+}

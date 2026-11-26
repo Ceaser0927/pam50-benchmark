@@ -1,0 +1,23 @@
+{
+  "expression_samples": 1218,
+  "expression_genes": 20530,
+  "phenotype_samples": 1247,
+  "in_both_files": 1218,
+  "primary_tumour": 1097,
+  "valid_pam50_label": 844,
+  "duplicate_patient_samples_removed": 0,
+  "final_samples": 844,
+  "pam50_genes_found": 50,
+  "pam50_genes_missing": [],
+  "aliases_used": {
+    "ORC6": "ORC6L"
+  },
+  "missing_values": 0,
+  "class_counts": {
+    "LumA": 421,
+    "LumB": 192,
+    "Her2": 67,
+    "Basal": 141,
+    "Normal": 23
+  }
+}
