@@ -25,7 +25,7 @@ meaningfully better than a linear model (multinomial logistic regression)?
 ## 2. Installation
 
 ```bash
-git clone <this-repo-url> pam50-benchmark
+git clone https://github.com/Ceaser0927/pam50-benchmark.git pam50-benchmark
 cd pam50-benchmark
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
